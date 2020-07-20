@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div id="someContainer">
+        <table border="1">
+            <tr>
+                <th>Dish Name</th>
+                <th>Quanty</th>
+                <th>Select</th>
+                <th>Price</th>
+            </tr>
+            <tr class="dishRow">
+                <td>Biryani</td>
+                <td><input type="number" value="1" /></td>
+                <td><input class="dish" type="checkbox" /></td>
+                <td>180</td>
+            </tr>
+            <tr class="dishRow">
+                <td>Nihari</td>
+                <td><input type="number" value="1" /></td>
+                <td><input class="dish" type="checkbox" /></td>
+                <td>150</td>
+            </tr>
+            <tr class="dishRow">
+                <td>Saag</td>
+                <td><input type="number" value="1" /></td>
+                <td><input data-price="30" class="dish" type="checkbox" /></td>
+                <td>30</td>
+            </tr>
+            <tr class="dishRow">
+                <td>Daal Maash</td>
+                <td><input type="number" value="1" /></td>
+                <td><input class="dish" type="checkbox" /></td>
+                <td>150</td>
+            </tr>
+            <tr class="dishRow">
+                <td>Shwarma</td>
+                <td><input type="number" value="1" /></td>
+                <td><input class="dish" type="checkbox" /></td>
+                <td>80</td>
+            </tr>
+            <tr class="dishRow">
+                <td>Sabzi</td>
+                <td><input type="number" value="1" /></td>
+                <td><input class="dish" type="checkbox" /></td>
+                <td>120</td>
+            </tr>
+            <tr class="dishRow">
+                <td>Pulao</td>
+                <td><input type="number" value="1" /></td>
+                <td><input class="dish" type="checkbox" /></td>
+                <td>220</td>
+            </tr>
+            <tr class="dishRow">
+                <td>Murhg Chana</td>
+                <td><input type="number" value="1" /></td>
+                <td><input class="dish" type="checkbox" /></td>
+                <td>250</td>
+            </tr>
+            <tr class="dishRow">
+                <td>Paye</td>
+                <td><input type="number" value="1" /></td>
+                <td><input class="dish" type="checkbox" /></td>
+                <td>400</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button onclick="calculateBill()">Calculate Bill</button>
+                    Gross Bill
+                    <div id="grossBill"></div>
+                    Discount
+                    <div id="discount">0</div>
+                    Net Bill
+                    <div id="netBill"></div>
+                    <!-- Discount <div id="netBill"></div> -->
+                </td>
+                <td>
+                    <select onchange="updateDishes()" id="dishRanger">
+                        <option value="100">100</option>
+                        <option value="200">200</option>
+                        <option value="450">450</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div id="main" class="main"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
